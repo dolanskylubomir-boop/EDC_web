@@ -2596,4 +2596,11 @@ footer {
     }
 }
 
+/* Větší odsazení obsahu pod hlavičkou na mobilech */
+@media (max-width: 480px) {
+    main {
+        margin-top: 120px !important;  /* zvětší odstup od horní fixní hlavičky */
+    }
+}
+
 
