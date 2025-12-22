@@ -2764,4 +2764,68 @@ footer {
         font-weight: 700;
     }
 }
+/* ==================== EDC CONTENT PAGE – MOBILNÍ OPTIMALIZACE   SDILENI_CONTENT.HTML A DALŠÍ ==================== */
+@media (max-width: 992px) {
+    .edc-content-page .content-block {
+        padding: 2rem 1.8rem;          /* mírně zmenšíme */
+        margin: 1.8rem 0;
+        border-radius: 10px;
+    }
+}
 
+@media (max-width: 768px) {
+    .edc-content-page .content-block {
+        padding: 1.8rem 1.5rem;
+        margin: 1.5rem 0;
+    }
+
+    .edc-content-page h1 {
+        font-size: 2.4rem;
+    }
+
+    .edc-content-page h3 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Klíčové – na malých mobilech chceme obsah téměř přes celou šířku */
+    .edc-content-page .container {
+        padding: 0 12px;               /* minimální boční okraj containeru */
+    }
+
+    .edc-content-page .content-block {
+        padding: 1.6rem 1.2rem;        /* malý vnitřní padding – dost místa na text */
+        margin: 1.4rem 0;
+        border-radius: 12px;
+    }
+
+    /* Střídavé pozadí – na mobilu může být jemnější, aby nebylo příliš "těžké" */
+    .edc-content-page .content-block:nth-of-type(even) {
+        background-color: rgba(196, 240, 222, 0.6);  /* trochu průhlednější */
+    }
+
+    .edc-content-page h1 {
+        font-size: 2.1rem;
+        line-height: 1.3;
+    }
+
+    .edc-content-page h3 {
+        font-size: 1.6rem;
+        margin: 1.8rem 0 1rem;
+    }
+
+    .edc-content-page p,
+    .edc-content-page ul li {
+        font-size: 1.05rem;
+        line-height: 1.75;
+    }
+
+    .edc-content-page ul {
+        padding-left: 1.6rem;
+    }
+
+    .edc-content-page ul li {
+        margin-bottom: 0.9rem;
+    }
+}
