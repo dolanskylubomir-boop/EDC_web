@@ -2573,3 +2573,27 @@ footer {
 @media (max-width: 768px) and (min-width: 481px) {
     .tereza-modern { width: 90%; max-width: 500px; left: auto; right: 20px; height: 85vh; }
 }
+/* Samsung / malé mobily – oprava hero boxu */
+@media (max-width: 480px) {
+    .hero {
+        padding: 2.5rem 1.2rem !important;   /* menší vnitřní okraje */
+        border-radius: 12px !important;      /* méně kulatý – víc místa */
+        margin: 0 8px 2rem 8px !important;   /* malý vnější okraj místo „narvaní“ na okraj */
+    }
+
+    .hero h1 {
+        font-size: 1.6rem !important;
+        line-height: 1.25 !important;
+        word-wrap: break-word !important;
+        hyphens: auto !important;
+    }
+
+    .hero p {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+        word-wrap: break-word !important;
+        hyphens: auto !important;
+    }
+}
+
+
