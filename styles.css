@@ -1905,6 +1905,29 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1); 
     padding-top: 1rem; 
 }
+/* ===================================================================
+   FOOTER – styly odkazů na konec souboru 
+   =================================================================== */
+
+footer a,
+.footer a {                    /* podle toho, jakou třídu/ID má tvůj footer */
+    color: inherit;            /* zdědí barvu textu z rodiče */
+    text-decoration: none;     /* odstraní podtržení */
+    font-weight: inherit;      /* zachová stejnou tučnost jako okolní text */
+}
+
+footer a:hover,
+.footer a:hover {
+    text-decoration: underline; /* volitelně – podtrhne při najetí myší pro přístupnost */
+    /* nebo můžeš nechat úplně bez reakce, pokud nechceš */
+}
+
+/* Speciálně pro ten download odkaz s ikonou nebo spanem */
+footer a .download-info,
+.footer a .download-info {
+    font-weight: normal;
+    opacity: 0.9;
+}
 
 /* ===================================================================
    VCAG neviditelné popisky
