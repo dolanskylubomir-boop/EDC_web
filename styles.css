@@ -2448,6 +2448,7 @@ footer {
     }
 }
 
+
 /* Mobilní úprava hlavního nadpisu na indexu */
 @media (max-width: 480px) {
     .hero {
@@ -2490,7 +2491,6 @@ footer {
         margin-top: 0.5rem !important;
     }
 }
-
 
 
 
@@ -2572,6 +2572,4 @@ footer {
 
 @media (max-width: 768px) and (min-width: 481px) {
     .tereza-modern { width: 90%; max-width: 500px; left: auto; right: 20px; height: 85vh; }
-
 }
-
