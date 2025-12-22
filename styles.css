@@ -2448,21 +2448,28 @@ footer {
     }
 }
 
-/* Mobilní optimalizace HERO sekce */
-@media (max-width: 768px) {
+/* Mobilní úprava hlavního nadpisu na indexu */
+@media (max-width: 480px) {
     .hero {
-        padding: 4rem 1rem !important;
+        padding: 3rem 1.5rem !important;
     }
+
     .hero h1 {
-        font-size: 2rem !important;
-        line-height: 1.2 !important;
-        margin-bottom: 0.8rem !important;
+        font-size: 1.8rem !important;      /* menší písmo */
+        line-height: 1.25 !important;      /* menší mezera mezi řádky */
+        max-width: 100% !important;        /* využije celou šířku */
+        text-align: center !important;
+        margin: 0 0 1rem 0 !important;
     }
+
     .hero p {
-        font-size: 1.1rem !important;
+        font-size: 1rem !important;
         line-height: 1.5 !important;
+        margin: 0 auto;
+        max-width: 100%;
     }
 }
+
 
 /* Vylepšení error-banner pro mobil */
 @media (max-width: 768px) {
@@ -2567,3 +2574,4 @@ footer {
     .tereza-modern { width: 90%; max-width: 500px; left: auto; right: 20px; height: 85vh; }
 
 }
+
