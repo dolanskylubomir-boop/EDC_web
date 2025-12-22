@@ -1032,6 +1032,71 @@ a.sub-modal-trigger, .sub-modal-trigger.no-link-style { text-decoration: none; c
 .pie-chart-container { margin: 2rem auto; max-width: 400px; }
 
 .structure-highlight { font-size: 1.1rem; color: #444; margin-top: 1rem; }
+/* Základní vylepšení pro lepší čitelnost textu v .edc-services */
+.edc-services p,
+.edc-services li {
+    hyphens: auto;              /* Automatické dělení slov pro lepší zalamování */
+    word-break: break-word;     /* Prevence přetečení dlouhých slov */
+    overflow-wrap: break-word;
+}
+
+/* Mobilní úpravy pro .edc-services – přidat do media queries */
+@media (max-width: 992px) {
+    .edc-services .container {
+        padding: 40px 30px;     /* Menší padding na tabletech */
+        border-radius: 16px;
+    }
+    
+    .edc-services h2 {
+        font-size: 2rem;
+    }
+    
+    .edc-services p,
+    .edc-services li {
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .edc-services .container {
+        padding: 35px 25px;     /* Ještě menší na středních mobilech */
+    }
+    
+    .edc-services h2 {
+        font-size: 1.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .edc-services {
+        padding: 60px 0;        /* Zachová vertikální odsazení sekce */
+    }
+    
+    .edc-services .container {
+        padding: 30px 20px;     /* Minimální padding na malých mobilech */
+        border-radius: 12px;
+        border-left-width: 4px; /* Tenčí levý pruh, aby nezabíral moc místa */
+    }
+    
+    .edc-services h2 {
+        font-size: 1.7rem;
+        line-height: 1.3;
+    }
+    
+    .edc-services p,
+    .edc-services li {
+        font-size: 1rem;        /* Menší písmo pro lepší fit */
+        line-height: 1.7;
+    }
+    
+    .edc-services ul {
+        padding-left: 1.4rem;   /* Menší odsazení seznamu */
+    }
+    
+    .edc-services ul li {
+        margin-bottom: 0.8rem;
+    }
+}
 
 /* ===================================================================
    SDÍLENÍ VIDEO MANUÁLY (sdileni_video.html)
