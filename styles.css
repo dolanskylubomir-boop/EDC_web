@@ -2603,4 +2603,42 @@ footer {
     }
 }
 
+/* Modal – fix přetečení na mobilech (S25) */
+@media (max-width: 480px) {
+    .modal {
+        padding: 0 !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .modal-content {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        height: auto !important;
+        max-height: 100vh !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        padding-right: 0 !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+        background-position: center top !important;
+    }
+
+    .modal-inner {
+        padding: 72px 16px 24px !important; /* nahoře místo pro křížek */
+        text-align: center;
+    }
+
+    .sub-modal-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+        padding: 0 !important;
+    }
+
+    .sub-modal-trigger {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+
 
