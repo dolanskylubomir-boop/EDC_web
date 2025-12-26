@@ -2852,3 +2852,25 @@ footer a .download-info,
         margin-bottom: 0.9rem;
     }
 }
+
+/* ===================================================================
+   Acordeon pro struktura_spolecnosi_content.html
+   =================================================================== */
+
+   @media (max-width: 480px) {
+    .edc-intro, .edc-services, .edc-organs, .edc-structure {
+        padding: 1rem 0 !important; /* Menší paddingy */
+        font-size: 0.95rem !important; /* Menší text */
+    }
+    .organs-grid {
+        grid-template-columns: 1fr !important; /* Jednosloupce */
+    }
+    #ownershipPieChart {
+        width: 100% !important;
+        height: 200px !important; /* Zmenšete chart */
+    }
+    img {
+        max-height: 200px !important; /* Omezte obrázky */
+    }
+}
+
