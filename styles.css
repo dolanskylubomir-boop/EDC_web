@@ -496,6 +496,10 @@ a.sub-modal-trigger, .sub-modal-trigger.no-link-style { text-decoration: none; c
 
 .sub-modal-content svg { fill: #ff0000; }
 
+
+
+
+
 /* ===================================================================
    VIDEO WRAPPER (používané v modálech na více stránkách)
    =================================================================== */
@@ -1650,9 +1654,9 @@ main.container.edc-content-page { padding-top: 100px; }
 }
 
 .letter-btn.active {
-    background: #0052cc;
+    background: #94e3c2;
     color: #fff;
-    border-color: #0052cc;
+    border-color: #c4f0de;
 }
 
 .slovnik-list {
@@ -1724,7 +1728,7 @@ main.container.edc-content-page { padding-top: 100px; }
     display: none;
     justify-content: center;
     align-items: center;
-    background: rgba(0,0,0,0.5);
+    background: #94e3c2;
     z-index: 9999;
 }
 
@@ -1762,7 +1766,7 @@ main.container.edc-content-page { padding-top: 100px; }
 .modal-slovnik .modal-inner {
     position: relative;
     z-index: 1;
-    color: #fff;
+    color: #ecfcf5;
     text-align: left;
     padding: 40px 30px 30px;
     display: block;
@@ -1772,7 +1776,7 @@ main.container.edc-content-page { padding-top: 100px; }
 }
 
 .slovnik-result-item {
-    background: #fff;
+    background: #ecfcf5;
     border-radius: 12px;
     margin-bottom: 1rem;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
@@ -1782,7 +1786,7 @@ main.container.edc-content-page { padding-top: 100px; }
 .slovnik-result-header {
     padding: 1.2rem 1.5rem;
     background: var(--primary);
-    color: #0a3d3d;
+    color: #05282a;
     font-size: 1.2rem;
     cursor: pointer;
     display: flex;
@@ -1791,7 +1795,7 @@ main.container.edc-content-page { padding-top: 100px; }
     user-select: none;
 }
 
-.slovnik-result-header:hover { background: #7dd1b1; }
+.slovnik-result-header:hover { background: #c4f0de; }
 
 .slovnik-arrow {
     font-size: 1.4rem;
@@ -1803,12 +1807,12 @@ main.container.edc-content-page { padding-top: 100px; }
     overflow: hidden;
     transition: max-height .4s ease;
     padding: 0 1.5rem;
-    background: #f9f9f9;
+    background: #c4f0de;
 }
 
 .slovnik-result-body p {
     padding: 1.5rem 0;
-    color: #333;
+    color: #27504c;
 }
 
 .slovnik-result-item.open .slovnik-result-body { padding: 1.5rem; }
@@ -2852,6 +2856,61 @@ footer a .download-info,
         margin-bottom: 0.9rem;
     }
 }
+/* ===================================================================
+   SLOVNÍK ENERGETIKY – SPECIÁLNÍ ZAROVNÁNÍ "FULL" TEXTU NA MOBILU
+   =================================================================== */
+.slovnik-result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: #c4f0de;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    flex-wrap: wrap; /* Povolí zalomení na mobilu */
+    gap: 8px;
+}
 
+.slovnik-result-header strong {
+    font-size: 1.15rem;
+    color: #05282a;
+    flex-shrink: 0;
+}
 
+/* Klíčový fix pro text za pomlčkou */
+.slovnik-result-header .full-text {
+    font-size: 1rem;
+    color: #555;
+    font-weight: normal;
+    white-space: nowrap; /* Zabrání zalomení uvnitř full textu */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Pokud je moc dlouhý, ukáže ... */
+}
+
+/* Na mobilu – full text pod termem, zarovnaný doleva, bez mezer */
+@media (max-width: 480px) {
+    .slovnik-result-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding: 14px 16px;
+    }
+
+    .slovnik-result-header .full-text {
+        white-space: normal; /* Na mobilu dovolí zalomení pro čitelnost */
+        overflow: visible;
+        text-overflow: unset;
+        font-size: 1rem;
+        color: #444;
+        margin-left: 0; /* Žádné odsazení */
+        line-height: 1.4;
+    }
+
+    /* Šipka dolů zůstane vpravo nahoře */
+    .slovnik-arrow {
+        position: absolute;
+        right: 16px;
+        top: 14px;
+    }
+}
 
