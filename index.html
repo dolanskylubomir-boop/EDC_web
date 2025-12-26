@@ -429,17 +429,20 @@
                         modalInner.innerHTML = `<h2 style="text-align:center; margin-bottom:2rem;">Nalezeno: ${countText}</h2>`;
 
                         filtered.forEach(item => {
-                            const itemHTML = `
-                                <div class="slovnik-result-item">
-                                    <div class="slovnik-result-header">
-                                        <strong>${item.term}</strong> ${item.full ? '– ' + item.full : ''}
-                                        <span class="slovnik-arrow">▼</span>
+                                const itemHTML = `
+                                    <div class="slovnik-result-item">
+                                        <div class="slovnik-result-header">
+                                            <div>
+                                                <strong>${item.term}</strong>
+                                                ${item.full ? '<span class="full-text">– ' + item.full + '</span>' : ''}
+                                            </div>
+                                            <span class="slovnik-arrow">▼</span>
+                                        </div>
+                                        <div class="slovnik-result-body">
+                                            <p>${item.text}</p>
+                                        </div>
                                     </div>
-                                    <div class="slovnik-result-body">
-                                        <p>${item.text}</p>
-                                    </div>
-                                </div>
-                            `;
+                                `;
                             modalInner.insertAdjacentHTML('beforeend', itemHTML);
                         });
                     }
